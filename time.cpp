@@ -12,7 +12,7 @@ public:
         minute = m;
         second = s;
     }
-    void showTime() {
+    void showTime() const {
         if(hour < 10)
             cout << '0';
         cout << hour << ':';
@@ -42,9 +42,9 @@ public:
 };
 
 int main() {
-    Time time(1, 1, 9);
+    const Time time(1, 1, 9), time1(13, 23, 43), time2(12, 14, 15);
     time.showTime();
-    Time time1(13, 23, 43), time2(12, 14, 15), temp;
+    Time temp;
     temp.addTime(time1, time2);
     temp.showTime();
 
