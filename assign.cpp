@@ -5,7 +5,9 @@ class Alpha {
     int data;
 public:
     Alpha() {}
-    Alpha(int d) : data(d) {}
+    Alpha(int d) : data(d) {
+        cout << "\nConstructor";
+    }
     void display() {
         cout << data;
     }
