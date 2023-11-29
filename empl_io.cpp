@@ -130,5 +130,5 @@ void Employee::write() {
     int size;
     cout << "Writing " << n << " employees\n";
     ofstream out;
-    employee
+    employee_type
 }
