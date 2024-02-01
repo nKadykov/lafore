@@ -6,9 +6,9 @@ class Distance {
     float inches;
 public:
     void getdist() {
-        cout << "\nEnter feet:";
+        cout << "\nEnter feet: ";
         cin >> feet;
-        cout << "Enter inches:";
+        cout << "Enter inches: ";
         cin >> inches;
     }
     void showdist() {
