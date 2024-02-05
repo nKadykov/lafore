@@ -16,6 +16,5 @@ int main() {
 
     cout << "My number: (" << number1.cityCode << ") " << number1.stationNumber << "-" << number1.subNumber << '\n';
     cout << "Your number: (" << number2.cityCode << ") " << number2.stationNumber << "-" << number2.subNumber;
-
     return 0;
 }
