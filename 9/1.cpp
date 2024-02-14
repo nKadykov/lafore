@@ -18,10 +18,12 @@ class Book : public Publication {
     int page;
 public:
     void getdata() {
+        Publication::getdata();
         cout << "Enter pages: ";
         cin >> page;
     }
     void putdata() {
+        Publication::putdata();
         cout << "Pages: " << page << '\n';
     }
 };
@@ -30,10 +32,12 @@ class Type : public Publication {
     float time;
 public:
     void getdata() {
+        Publication::getdata();
         cout << "Enter time: ";
         cin >> time;
     }
     void putdata() {
+        Publication::putdata();
         cout << "Time: " << time << '\n';
     }
 };
