@@ -35,14 +35,13 @@ int main() {
     Distance d2 = 1.25;
     Distance d3;
 
-    cout << "\nd1 = ";
+    cout << "d1 = ";
     d1.showdist();
-    cout << "\nd2 = ";
+    cout << "d2 = ";
     d2.showdist();
 
     d3 = d1 + 10;
     cout << "d3 = ";
     d3.showdist();
-    cout << '\n';
     return 0;
 }
