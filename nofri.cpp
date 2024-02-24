@@ -43,5 +43,6 @@ int main() {
     d3 = d1 + 10;
     cout << "d3 = ";
     d3.showdist();
+    // d3 = 10 + d1;
     return 0;
 }
