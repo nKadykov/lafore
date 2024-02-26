@@ -28,6 +28,7 @@ int main() {
     a2 = a1;
     cout << "\na2 = ";
     a2.display();
+    Alpha a4 = a1;
 
     Alpha a3(a1);
     cout << "\na3 = ";
