@@ -27,6 +27,11 @@ public:
     void getdist() {
         std::cout << "Enter feet: ";
         std::cin >> feet;
+        std::cout << "Enter inches: ";
+        std::cin >> inches;
+        if(inches >= 12.0) {
+            throw InchesEx("function getdist()", inches);
+        }
     }
     void showdist() {
         std::cout << feet << "\' - " << inches << "\"" << std::endl;
