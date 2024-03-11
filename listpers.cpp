@@ -81,18 +81,18 @@ int main() {
         } while(iter1 != persList.end());
     }
     else {
-        cout << "There is no this man\n";
+        cout << "There is no this man" << endl;
     }
 
-    cout << "\nEnter number of phone: ";
+    cout << "Enter number of phone: ";
 
     long sNumber;
     cin >> sNumber;
     bool found_one = false;
-    for(iter1 != persList.begin(); iter1 != persList.end(); ++iter1) {
+    for(iter1 = persList.begin(); iter1 != persList.end(); ++iter1) {
         if(sNumber == (*iter1).get_phone()) {
             if(!found_one) {
-                cout << "There is man (or men) with this number: ";
+                cout << "There is man (or men) with this number:\n";
                 found_one = true;
             }
             (*iter1).display();
