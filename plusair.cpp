@@ -10,7 +10,7 @@ public:
     Airtime() : hours(0), minutes(0) {}
     Airtime(int h, int m) : hours(h), minutes(m) {}
     void display() const {
-        cout << hours << ' ' << minutes;
+        cout << hours << ':' << minutes;
     }
     void get() {
         char dummy;
@@ -47,7 +47,7 @@ int main() {
     do {
         temp.get();
         airlist.push_back(temp);
-        cout << "Continue (y/n)? \n";
+        cout << "Continue (y/n)?: ";
         cin >> answer;
     } while(answer != 'n');
     sum = accumulate(airlist.begin(), airlist.end(), Airtime(0, 0), plus<Airtime>());
