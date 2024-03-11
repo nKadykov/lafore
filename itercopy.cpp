@@ -8,7 +8,7 @@ int main() {
     int arr[] = {11, 13, 15, 17, 19, 21, 23, 25, 27, 29};
     vector<int> v1(arr, arr + 10);
     vector<int> v2(10);
-    cout << "Enter distance:";
+    cout << "Enter distance: ";
     cin >> beginRange >> endRange;
 
     vector<int>::iterator iter1 = v1.begin() + beginRange;
