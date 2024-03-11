@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include <cstring>
+#include <string>
 using namespace std;
 
 class Person {
@@ -10,12 +10,12 @@ class Person {
     long phoneNumber;
 public:
     Person() : lastName("empty"), firstName("empty"), phoneNumber(0L) {}
-    Person(string lana, string fina, long pho) {}
+    Person(string lana, string fina, long pho) : lastName(lana), firstName(fina), phoneNumber(pho) {}
     friend bool operator<(const Person&, const Person&);
     friend bool operator==(const Person&, const Person&);
     void display() const {
-        cout << lastName << '\t' << firstName << 
-        "\t\t" << phoneNumber << '\n';
+        cout << endl << lastName << '\t' << firstName << 
+        "\t\t" << phoneNumber;
     }
     long get_phone() const {
         return phoneNumber;
@@ -30,7 +30,7 @@ bool operator<(const Person& p1, const Person& p2) {
 }
 
 bool operator==(const Person& p1, const Person& p2) {
-    return ((p1.lastName == p2.lastName) && (p1.firstName == p2.firstName)) ? true : false;
+    return (p1.lastName == p2.lastName && p1.firstName == p2.firstName) ? true : false;
 }
 
 class comparePersons {
@@ -66,10 +66,10 @@ int main() {
 
     for_each(vectPtrsPers.begin(), vectPtrsPers.end(), displayPerson());
     sort(vectPtrsPers.begin(), vectPtrsPers.end());
-    cout << "Pointers:\n";
+    cout << "\nPointers:";
     for_each(vectPtrsPers.begin(), vectPtrsPers.end(), displayPerson());
     sort(vectPtrsPers.begin(), vectPtrsPers.end(), comparePersons());
-    cout << "\nPointers\n";
+    cout << "\nPointers:";
     for_each(vectPtrsPers.begin(), vectPtrsPers.end(), displayPerson());
     while(!vectPtrsPers.empty()) {
         delete vectPtrsPers.back();
