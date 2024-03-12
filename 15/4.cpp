@@ -59,7 +59,7 @@ int main() {
     }
     iter = s.begin();
     while(iter != s.end()) {
-        delete *iter; // удаление итератора
+        delete *iter; // удаление указателя
         s.erase(iter++); // удаление персоны из мультимножества
     }
 
